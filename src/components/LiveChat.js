@@ -6,7 +6,7 @@ const LiveChat = () => {
     const i = setInterval(() => {
       // Api Polling
       console.log("api polling");
-    }, 2000);
+    }, 3000);
 
     return () => clearInterval(i);
   }, []);
