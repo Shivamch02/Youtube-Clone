@@ -14,23 +14,25 @@ const WatchPage = () => {
     dispatch(closeMenu());
   }, []);
   return (
-    <div className="flex flex-col w-full">
-      <div className="px-5 flex w-full">
-        <div>
-          <iframe
-            className="border border-r-8"
-            width="1200"
-            height="600"
-            src={"https://www.youtube.com/embed/" + searchParams.get("v")}
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-          ></iframe>
-        </div>
-        <div className="w-full">
-          <LiveChat />
+    <div>
+      <div className="flex flex-col w-[full] pt-2 items-center gap-5">
+        <div className="px-3 flex w-[1280px] gap-5">
+          <div>
+            <iframe
+              className="rounded-lg"
+              width="853"
+              height="480"
+              src={"https://www.youtube.com/embed/" + searchParams.get("v")}
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            ></iframe>
+          </div>
+          <div className="w-[402px]">
+            <LiveChat />
+          </div>
         </div>
       </div>
       <CommentsContainer />
